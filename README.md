@@ -19,7 +19,8 @@ An automated tool to monitor and notify about available US visa appointment slot
 
 - Docker and Docker Compose
 - Account on [checkvisaslots.com](https://checkvisaslots.com) to obtain API key
-  - Register and subscribe to their service
+  - Registration is required to get the API key (free)
+  - While this tool works without a paid subscription, please consider subscribing to support checkvisaslots.com if you find this tool useful
   - Get your API key from the dashboard
 - Pushover account for mobile notifications (optional)
   - Register at [pushover.net](https://pushover.net)
