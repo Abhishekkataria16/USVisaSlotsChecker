@@ -1,32 +1,41 @@
-# US Visa Slot Checker
+# 🔍 US Visa Appointment Slot Checker | Automated Notification System
 
-An automated tool to monitor and notify about available US visa appointment slots across different consulates and VAC (Visa Application Center) locations in India.
+[![Docker Support](https://img.shields.io/badge/Docker-Supported-blue.svg)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Features
+An automated monitoring tool that checks for available US visa appointment slots at Indian consulates and VAC (Visa Application Center) locations. Get instant notifications when slots become available for US visa appointments in India.
 
-- Monitors US visa appointment slots every 3 minutes
-- Supports multiple consulate and VAC locations
-- Dual notification system:
-  - Email notifications (supports Gmail and custom SMTP servers)
-  - Pushover mobile notifications
-- Configurable time window for slot checking
-- Docker-based deployment for easy setup
-- Timezone set to IST (India Standard Time)
-- Proxy support for API requests
-- Detailed logging
+## 🌟 Key Features
 
-## Prerequisites
+- **Real-time Monitoring**: Checks US visa slots every 3 minutes automatically
+- **Multi-location Support**: Monitors multiple Indian consulates and VAC locations simultaneously
+- **Smart Notifications**:
+  - 📧 Email alerts (Gmail, Yahoo, Outlook, custom SMTP)
+  - 📱 Mobile push notifications via Pushover
+- **Flexible Configuration**:
+  - Customizable time window for slot checking
+  - Multiple location monitoring
+  - IST (Indian Standard Time) timezone support
+- **Enterprise Features**:
+  - Proxy support for reliable API access
+  - Detailed logging system
+  - Docker-based deployment
+  - Automatic restart on failure
 
-- Docker and Docker Compose
-- Account on [checkvisaslots.com](https://checkvisaslots.com) to obtain API key
-  - Registration is required to get the API key (free)
+## 🚀 Quick Start Guide
+
+### Prerequisites
+
+- 🐳 Docker and Docker Compose installed on your system
+- 🔑 [checkvisaslots.com](https://checkvisaslots.com) account
+  - Free registration required for API key access
   - While this tool works without a paid subscription, please consider subscribing to support checkvisaslots.com if you find this tool useful
   - Get your API key from the dashboard
-- Pushover account for mobile notifications (optional)
-  - Register at [pushover.net](https://pushover.net)
+- 📱 Pushover account for mobile notifications (optional)
+  - Sign up at [pushover.net](https://pushover.net)
   - Create an application to get your application token
   - Get your user key from the dashboard
-- SMTP email account (Gmail/Yahoo/zoho etc)
+- 📧 SMTP email account (Gmail/Yahoo/Outlook/Custom SMTP)
 
 ## Environment Variables
 
@@ -81,41 +90,55 @@ docker-compose logs -f
    - Sends a Pushover notification (if configured)
 4. The script converts all timestamps to IST for easier tracking
 
-## Configuration Options
+## 🔧 Configuration Options
 
-### Visa Locations
-- `VISA_CONSULATE_LOCATIONS`: Comma-separated list of consulate locations (default: "NEW DELHI")
-- `VISA_VAC_LOCATIONS`: Comma-separated list of VAC locations (default: "NEW DELHI VAC,MUMBAI VAC,KOLKATA VAC")
+### 📍 Visa Locations
+Configure which locations to monitor:
+- `VISA_CONSULATE_LOCATIONS`: Consulate locations (default: "NEW DELHI")
+- `VISA_VAC_LOCATIONS`: VAC locations (default: "NEW DELHI VAC,MUMBAI VAC,KOLKATA VAC")
 
-### Time Window
-- `VISA_DURATION_DAYS`: Number of days to look ahead for slots (default: 120 days)
+### ⏰ Time Window
+- `VISA_DURATION_DAYS`: Search window in days (default: 120 days)
 
-### Email Settings
-- Supports both Gmail and custom SMTP servers
-- For Gmail, enable "Less secure app access" or use App Password
+### 📧 Email Configuration
+- Compatible with major email providers
+- Secure SMTP support with TLS
+- App-specific password support for enhanced security
 
-### Proxy Configuration
-- Optional proxy support for API requests
-- Configure using `PROXY_IP` and `PROXY_PORT`
+### 🔒 Proxy Settings
+- Enterprise-grade proxy support
+- Configurable proxy host and port
+- Improved reliability for API requests
 
-## Logging
+## 📝 Logging
 
-- Logs are stored in the `./logs` directory
-- All times are in IST (India Standard Time)
-- Includes API response details and notification status
+- Structured logs in `./logs` directory
+- IST timestamp format
+- Detailed API response tracking
+- Notification delivery status
 
-## Docker Support
+## 🐳 Docker Deployment
 
-The application runs in a Docker container with:
-- Python 3.10 Alpine base image
-- Automatic restart on failure
-- Volume mapping for logs
+Built on:
+- Python 3.10 Alpine for minimal footprint
 - Supervisor for process management
+- Automatic container health checks
+- Volume-based log persistence
 
-## Contributing
+## 🤝 Contributing
 
-Feel free to submit issues and enhancement requests!
+We welcome:
+- Bug reports
+- Feature requests
+- Pull requests
+- Documentation improvements
 
-## License
+## 📄 License
 
-This project is open source and available under the MIT License. 
+This project is open source and available under the MIT License.
+
+## 🔍 Keywords
+us visa appointment, visa slot checker, us visa slots india, visa appointment tracker, us visa booking, consulate appointment, vac appointment, automated visa checker, us visa notification, visa slot availability
+
+---
+*Built with ❤️ for the US visa applicant community in India* 
