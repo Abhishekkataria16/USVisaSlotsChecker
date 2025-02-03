@@ -1,0 +1,5 @@
+Dockerfile-custom/*
+*.ppk
+id_rsa
+id_rsa.*
+.venv/*

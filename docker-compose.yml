@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  visa-checker:
+    build: .
+    environment:
+      - TZ=Asia/Kolkata
+      - SENDER_EMAIL=${SENDER_EMAIL}
+      - SENDER_PASSWORD=${SENDER_PASSWORD}
+      - RECEIVER_EMAIL=${RECEIVER_EMAIL}
+      - SMTP_HOST=${SMTP_HOST:-smtp.gmail.com}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USE_TLS=${SMTP_USE_TLS:-true}
+      - API_KEY=${API_KEY}
+      - PROXY_IP=${PROXY_IP}
+      - PROXY_PORT=${PROXY_PORT}
+      - PUSHOVER_TOKEN=${PUSHOVER_TOKEN}
+      - PUSHOVER_USER=${PUSHOVER_USER}
+      - VISA_CONSULATE_LOCATIONS=${VISA_CONSULATE_LOCATIONS:-NEW DELHI}
+      - VISA_VAC_LOCATIONS=${VISA_VAC_LOCATIONS:-NEW DELHI VAC,MUMBAI VAC,KOLKATA VAC}
+      - VISA_DURATION_DAYS=${VISA_DURATION_DAYS:-120}
+    volumes:
+      - ./logs:/var/log
+    restart: always

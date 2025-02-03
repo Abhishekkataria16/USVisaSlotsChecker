@@ -1,0 +1,2 @@
+# Run every 3 minutes
+*/3 * * * * /usr/local/bin/python /app/visa_slot_checker.py >> /proc/1/fd/1 2>&1
